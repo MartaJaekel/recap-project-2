@@ -1,19 +1,29 @@
 body {
     font-family: italic;
     margin: 0;
+    background-color: var(--bg-color);
+}
+
+:root {
+    --color: black;
+    --bg-color: beige;
+    --border-color: black;
 }
 
 h1 {
-
+    color: var(--color)
 }
 
 h2 {
+    color: var(--color)
 
 }
 
 p {
-    
+    color: var(--color)
 }
+
+
 
 container {
     display: flex;
@@ -22,7 +32,7 @@ container {
 }
 
 header {
-    background-color: rgb(163, 119, 205);
+    background-color: rgb(89, 72, 105);
     text-align: center;
     width: 100%;
     position: fixed;
@@ -34,7 +44,7 @@ header {
 main {
     margin-top: 100px;
     margin-bottom: 100px;
-    background-color: beige;
+    background-color: var(--bg-color);
     padding: 0 10px;
 }
 
@@ -134,7 +144,7 @@ button {
 
     position: fixed;
     bottom: 0;
-    background-color: #f3cdf0;
+    background-color: rgb(210, 197, 221);
 
     width: 100%;
     height: 100px;
@@ -145,22 +155,29 @@ button {
     z-index: 1;
 }
 
-.footer button {
-
+.footer a {
     flex-grow: 1;
     height: 100%;
+    width: 100%;
+    text-align: center;
 }
 
-footer button:hover {
+footer a:hover {
     background-color: white;
 }
 
 footer img {
-    height: 72px;
-    width: 72px;
+    height: 100px;
+    width: 55px;
 }
 
 .image-bookamrk {
     width: 15px;
     height: 15px;
+}
+
+
+
+.hidden {
+    display: none;
 }

@@ -38,26 +38,31 @@
             </section>
             <section>
                 <h2>Settings</h2>
-                <input type="checkbox" id="checkbox" name="checkbox">
-  <label for="checkbox"> Darkmode</label>
-                
-               
+
+                <label class="switch" for="dark-mode-switch">
+                    <input type="checkbox" id="dark-mode-switch" name="dark-mode-switch">
+                    <span class="slider"></span>
+                </label>
+
+
             </section>
         </main>
         <footer class="footer">
-            <!--ich habe mit Aria Label dem Link eine Beschreibung gegeben , falls z.b ein Screenreader eingesetzt wird 
-            kann dieser was bedeutsames vorlesen -->
-            <button>
+
+            <a href="http://127.0.0.1:5504/index.html">
                 <img src="../assets/home.svg" alt="home">
-            </button>
-            <button>
+            </a>
+            <a href="http://127.0.0.1:5504/bookmark.html">
                 <img src="../assets/bookmark.svg" alt="home">
-            </button>
-            <button>
+            </a>
+
+            <a href="http://127.0.0.1:5504/profile/index.html">
                 <img src="../assets/profile.svg" alt="home">
-            </button>
+            </a>
+
         </footer>
     </container>
 </body>
+<script src="../script.js"></script>
 
 </html>
