@@ -41,9 +41,9 @@ let white = true;
 
 bookmark.addEventListener("click" , () => {
     if (white) {
-    bookmark.src = "bookmark-white.svg";
+    bookmark.src = "assets/bookmark-white.svg";
     } else {
-        bookmark.src = "bookmark-svg";
+        bookmark.src = "assets/bookmark.svg";
 
     }
     white = !white;
