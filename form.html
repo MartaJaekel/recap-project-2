@@ -5,77 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./form.css">
 </head>
 
 <body>
+    <container>
+        <header>
+            <h1>Quiz App</h1>
+        </header>
 
-    <header>
-        <h1>Quiz App</h1>
-    </header>
-
-    <body>
         <main>
-
-            <form class="form" data-js="form">
-
-
-                <label for="question">Your Question:</label>
-
-                <textarea id="question" name="question"></textarea>
-
-                <label for="answer">Your Answer:</label>
-
-                <textarea id="answer" name="answer"></textarea>
-
-
-                <div class="input-submit">
-
-
+            <section>
+                <form class="form" data-js="form">
+                    <label for="question">Your Question:</label>
+                    <textarea id="question" name="question"></textarea>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer"></textarea>
                     <label for="tags">Tag:</label>
-                    <input type="text" id="tags" name="tags" required minlength="4" maxlength="8" />
+                    <input type="text" id="tags" name="tags" required minlength="4" />
                     <button>Submit</button>
-                </div>
-                <div class="new-card" data-js="question-cards">
-            
-                </div>
-
-
-
-
-
-            </form>
+                </form>
+                <div data-js="new-card"></div>
+            </section>
         </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </form>
-       
-
-
-
         <footer class="footer">
-
-
             <a href="http://127.0.0.1:5504/index.html">
                 <img src="./assets/home.svg" alt="home">
             </a>
-
-
-
             <a href="http://127.0.0.1:5504/bookmark.html">
                 <img src="assets/bookmark.svg" alt="home">
             </a>
@@ -85,9 +42,9 @@
             <a href="http://127.0.0.1:5504/profile/index.html">
                 <img src="assets/profile.svg" alt="home">
             </a>
-
         </footer>
-        <script src="form.js"></script>
-    </body>
-    </html>
-    
+    </container>
+    <script src="form.js"></script>
+</body>
+
+</html>

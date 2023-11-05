@@ -35,21 +35,26 @@ window.onload = () => {
 
     applyDarkMode(darkMode);
 } */
-
+//Html Element wird mit Class gewählt
 const bookmark = document.querySelector(".image-bookmark");
+//variable um den Zustand des Bookmarks zu verfolgen
 let white = true;
 
 bookmark.addEventListener("click" , () => {
+    //Wert der Variable white wird überprüft
+    //wenn weiß dann wird wird das src Attribut auf das entsprechende bookmark.svg gesetzt
     if (white) {
     bookmark.src = "assets/bookmark-white.svg";
     } else {
         bookmark.src = "assets/bookmark.svg";
 
     }
+    //white wird umgekehrt indem sein Wert negiert wird
     white = !white;
 }); 
 
 const answerButton = document.querySelector(".button");
+//Antwort die in und ausgeblendet werden soll
 const answer = document.querySelector(".answer");
 
 answerButton.addEventListener("click", () => {

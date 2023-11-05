@@ -1,17 +1,31 @@
 const form = document.querySelector("[data-js='form']");
-const questionCard = document.querySelector("[data-js='question-cards']");
-form.addEventListener("submit", function(event) {
+//HTML eleemnt das neue Question-Card anzeigt
+const questionCardContainer = document.querySelector("[data-js='new-card']");
+
+form.addEventListener("submit", function (event) {
     event.preventDefault();
     const { question, answer, tags } = form.elements;
     const card = document.createElement("div");
-    card.classList.add("question-cards");
-
+    card.classList.add("question-card");
     card.innerHTML = `
-            <p>Question: ${question.value}</p>
-            <p>Answer: ${answer.value}</p>
-            <p>Tags: ${tags.value}</p>
-        `;
-        questionCard.appendChild(card);
-    form.reset();
+        <button class="bookmark" >
+            <img class="image-bookmark" src="assets/bookmark-white.svg" alt="bookmark">
+        </button>
+        <h2>${question.value}</h2>
+        <button class="button">Show Answer</button>
+        <div class="answer hidden">
+            <h3>${answer.value}</h3>
+        </div>
+        <div class="tags"></div>
+    `
+    questionCardContainer.appendChild(card);
 
+    const tagsElements = document.querySelector('.tags');
+    tags.value.split(',').forEach((tagText) => {
+        const tag = document.createElement('span')
+        tag.classList.add("tag");
+        tag.innerHTML = tagText.trim();
+        tagsElements.appendChild(tag)
+    })
+    form.reset();
 });
